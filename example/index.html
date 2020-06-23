@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button.btn {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            background-color: #05cd51;
+            cursor: pointer;
+
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            outline: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 2px 2px 10px #026126;
+        }
+
+        button.btn:hover {
+            background-color: #1fff75;
+            box-shadow: 2px 2px 10px #16af51;
+        }
+    </style>
+</head>
+<body>
+    <button
+        id="whatsapp-icon"
+        type="button"
+        class="btn"
+        title="Link WhatsApp"
+        data-phone="+0000000000000"
+        data-message="Olá Empresa Teste, tudo bem? \n Gostaria de me cadastrar em sua base de contatos \n\n *Nome:* {{nome!}} \n *Email:* {{email:email!}} \n *Interece:* {{interece:select[Opção 1, Opção 2, Opção 3]!}} \n\n Desde ja agradeço."
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="30pt"
+            height="37pt"
+            viewBox="0 0 50 57"
+            version="1.1"
+        >
+            <g>
+                <path
+                    style=" stroke:none;fill-rule:nonzero;fill:rgb(255,255,255);fill-opacity:1;"
+                    d="M 42.511719 10.808594 C 37.835938 6.132812 31.605469 3.5625 24.988281 3.5625 C 11.328125 3.5625 0.210938 14.652344 0.210938 28.277344 C 0.210938 32.628906 1.351562 36.882812 3.515625 40.632812 L 0 53.4375 L 13.136719 49.996094 C 16.753906 51.96875 20.824219 53.003906 24.976562 53.003906 L 24.988281 53.003906 C 38.636719 53.003906 50 41.914062 50 28.289062 C 50 21.6875 47.1875 15.484375 42.511719 10.808594 Z M 24.988281 48.839844 C 21.285156 48.839844 17.65625 47.847656 14.496094 45.980469 L 13.75 45.535156 L 5.960938 47.570312 L 8.035156 39.988281 L 7.542969 39.210938 C 5.480469 35.9375 4.398438 32.164062 4.398438 28.277344 C 4.398438 16.957031 13.636719 7.738281 25 7.738281 C 30.503906 7.738281 35.667969 9.875 39.554688 13.761719 C 43.4375 17.644531 45.824219 22.800781 45.816406 28.289062 C 45.816406 39.621094 36.339844 48.839844 24.988281 48.839844 Z M 36.285156 33.453125 C 35.667969 33.140625 32.621094 31.652344 32.054688 31.449219 C 31.484375 31.238281 31.070312 31.136719 30.660156 31.761719 C 30.246094 32.386719 29.0625 33.765625 28.695312 34.1875 C 28.335938 34.601562 27.96875 34.65625 27.355469 34.34375 C 23.714844 32.53125 21.328125 31.105469 18.929688 26.996094 C 18.292969 25.90625 19.566406 25.984375 20.746094 23.625 C 20.949219 23.210938 20.847656 22.855469 20.691406 22.542969 C 20.535156 22.230469 19.296875 19.191406 18.785156 17.957031 C 18.28125 16.753906 17.769531 16.921875 17.386719 16.898438 C 17.03125 16.878906 16.617188 16.878906 16.207031 16.878906 C 15.792969 16.878906 15.121094 17.035156 14.554688 17.644531 C 13.984375 18.269531 12.386719 19.761719 12.386719 22.800781 C 12.386719 25.839844 14.609375 28.777344 14.910156 29.191406 C 15.222656 29.601562 19.273438 35.835938 25.492188 38.519531 C 29.417969 40.210938 30.960938 40.355469 32.925781 40.066406 C 34.117188 39.890625 36.585938 38.574219 37.097656 37.128906 C 37.613281 35.679688 37.613281 34.445312 37.457031 34.1875 C 37.308594 33.910156 36.898438 33.753906 36.285156 33.453125 Z M 36.285156 33.453125"
+                />
+            </g>
+        </svg>
+    </button>
+
+    <script type="module">
+        import PrettierWhatsappLink from "../src/index.js";
+
+        const whatsappLink = document.getElementById("whatsapp-icon");
+        if (whatsappLink) PrettierWhatsappLink(whatsappLink);
+
+    </script>
+</body>
+</html>
